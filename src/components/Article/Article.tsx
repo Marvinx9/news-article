@@ -2,11 +2,11 @@ import IArticle  from "../../Interfaces/IArticle"
 
 const Article = ({title, text, tags, image, alt} : IArticle) => {
     return (
-        <div className="p-5 bg-gray-200 dark:bg-[#A64D79] sm:rounded-xl sm:shadow-lg flex flex-col items-center gap-2 sm:hover:shadow-gray-500 sm:hover:dark:shadow-black sm:hover:shadow-lg">
+        <div className="news-card">
             <h3 className="text-xl text-stone-900 font-bold">{title}</h3>
             <div className="w-full flex-row justify-end gap-2 pr-5 hidden sm:flex">
                 {
-                    tags.map(tag => <span key={tag} className="bg-gray-100 dark:bg-stone-300 px-4 py-1 rounded-full text-xs uppercase hover:scale-110">{tag}</span>)
+                    tags.map(tag => <span key={tag} className="bg-gray-100 dark:bg-stone-300 px-4 py-1 rounded-full text-xs uppercase hover:scale-110 hover:bg-gradient-to-r hover:from-stone-700">{tag}</span>)
                 }
             </div>
             <div className="grid gap-1">

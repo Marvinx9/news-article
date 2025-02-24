@@ -7,7 +7,7 @@ const Header = (props: IUser ) => {
             <span className="text-gray-100">
                 Olá, {props.name && props.name !== null ? props.name : 'usuário'}
             </span>
-            <h1 className="text-gray-100 text-xl sm:hover:text-2xl sm:cursor-pointer">News Article</h1>
+            <h1>News Article</h1>
             <ToggleTheme/>
         </div>
     )

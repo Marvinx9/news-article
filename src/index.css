@@ -1,2 +1,29 @@
 @import "tailwindcss";
+
 @custom-variant dark (&:where(.dark, .dark *));
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-gray-100 text-xl sm:hover:text-2xl sm:cursor-pointer;
+    }
+}
+
+@layer components {
+    .news-input {
+        @apply py-1 pl-5 w-full max-w-lg rounded-full outline-none bg-[#cdd1da91] dark:bg-[#A64D79] placeholder:text-xs focus:border-2 focus:border-[#0000003b] focus:invalid:border-2 focus:invalid:border-red-400;
+    }
+
+    .news-button {
+        @apply py-1 px-5 max-w-sm w-full bg-gray-400 dark:bg-[#6A1E55] rounded-full hover:animate-pulse hover:shadow-sm hover:shadow-gray-500 dark:hover:shadow-[#6a1e552f];
+    }
+
+    .news-card {
+        @apply p-5 bg-gray-200 dark:bg-[#A64D79] sm:rounded-xl sm:shadow-lg flex flex-col items-center gap-2 sm:hover:shadow-gray-500 sm:hover:dark:shadow-black sm:hover:shadow-lg;
+    }
+}
