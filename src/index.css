@@ -9,21 +9,28 @@
 @tailwind utilities;
 
 @layer base {
-    h1 {
-        @apply text-gray-100 text-xl sm:hover:text-2xl sm:cursor-pointer;
-    }
+  h1 {
+    @apply text-gray-900 dark:text-gray-100 text-xl sm:hover:text-2xl sm:cursor-pointer;
+  }
 }
 
 @layer components {
-    .news-input {
-        @apply py-1 pl-5 w-full max-w-lg rounded-full outline-none bg-[#cdd1da91] dark:bg-[#A64D79] placeholder:text-xs focus:border-2 focus:border-[#0000003b] focus:invalid:border-2 focus:invalid:border-red-400;
-    }
+  .news-input {
+    @apply py-2 px-4 w-full max-w-lg rounded-lg outline-none bg-gray-200 dark:bg-[#252836] 
+    placeholder:text-xs text-gray-900 dark:text-gray-200 
+    focus:border-2 focus:border-[#3b82f6] dark:focus:border-[#6a1e55];
+  }
 
-    .news-button {
-        @apply py-1 px-5 max-w-sm w-full bg-gray-400 dark:bg-[#6A1E55] rounded-full hover:animate-pulse hover:shadow-sm hover:shadow-gray-500 dark:hover:shadow-[#6a1e552f];
-    }
+  .news-button {
+    @apply py-2 px-5 max-w-sm w-full bg-gray-400 dark:bg-[#1e293b] text-gray-900 dark:text-gray-200 
+    rounded-lg transition-all duration-300 ease-in-out 
+    hover:shadow-md hover:bg-gray-500 dark:hover:bg-[#2563eb];
+  }
 
-    .news-card {
-        @apply p-5 bg-gray-200 dark:bg-[#A64D79] sm:rounded-xl sm:shadow-lg flex flex-col items-center gap-2 sm:hover:shadow-gray-500 sm:hover:dark:shadow-black sm:hover:shadow-lg;
-    }
+  .news-card {
+    @apply p-6 bg-gray-100 dark:bg-[#1e1e2e] text-gray-900 dark:text-gray-100 
+    sm:rounded-xl sm:shadow-md 
+    transition-all duration-300 ease-in-out
+    sm:hover:shadow-lg sm:hover:shadow-blue-500/50;
+  }
 }
